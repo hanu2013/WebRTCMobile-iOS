@@ -13,5 +13,15 @@
 // The main application class of the AppRTCMobile iOS app demonstrating
 // interoperability between the Objective C implementation of PeerConnection
 // and the appr.tc demo webapp.
+
+@import XMPPFramework;
+
 @interface ARDAppDelegate : NSObject <UIApplicationDelegate>
+
+@property (nonatomic, strong) XMPPStream *xmppStream;
+@property (nonatomic, strong) XMPPAutoPing *xmppAutoPing;
+
+@property (nonatomic, strong) XMPPPing *xmppPing;
+@property (nonatomic, strong) XMPPReconnect *xmppReconnect;
+
 @end

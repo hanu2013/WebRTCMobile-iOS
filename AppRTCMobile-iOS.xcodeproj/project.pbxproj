@@ -11,7 +11,6 @@
 		07077A26207E636E00B9FCD8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 07077A24207E636E00B9FCD8 /* LaunchScreen.storyboard */; };
 		07077ACA207E648C00B9FCD8 /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07077AC9207E648C00B9FCD8 /* WebRTC.framework */; };
 		07077ACC207E7CB800B9FCD8 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 07077ACB207E7CB800B9FCD8 /* libicucore.tbd */; };
-		07077ACD207E7D1700B9FCD8 /* WebRTC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07077AC9207E648C00B9FCD8 /* WebRTC.framework */; };
 		07077ACE207E7D1700B9FCD8 /* WebRTC.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 07077AC9207E648C00B9FCD8 /* WebRTC.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		07077B33207E7F0200B9FCD8 /* ARDAppClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 07077AD3207E7F0200B9FCD8 /* ARDAppClient.m */; };
 		07077B34207E7F0200B9FCD8 /* ARDAppEngineClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 07077AD5207E7F0200B9FCD8 /* ARDAppEngineClient.m */; };
@@ -60,7 +59,69 @@
 		07077B63207E7F0200B9FCD8 /* RTCSessionDescription+JSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 07077B29207E7F0200B9FCD8 /* RTCSessionDescription+JSON.m */; };
 		07077B67207E7F0200B9FCD8 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 07077B30207E7F0200B9FCD8 /* LICENSE */; };
 		07077B68207E7F0200B9FCD8 /* SRWebSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 07077B32207E7F0200B9FCD8 /* SRWebSocket.m */; };
+		F6E4F9252111C1F000988574 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E4F9242111C1F000988574 /* CocoaAsyncSocket.framework */; };
+		F6E4F9272111C1F000988574 /* KissXML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E4F9262111C1F000988574 /* KissXML.framework */; };
+		F6E4F9292111C1F000988574 /* libidn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E4F9282111C1F000988574 /* libidn.framework */; };
+		F6E4F92A2111C1F000988574 /* XMPPFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E4F9192111C1B900988574 /* XMPPFramework.framework */; };
+		F6E4F92C2111CC5F00988574 /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6E4F9242111C1F000988574 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6E4F92E2111CC5F00988574 /* KissXML.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6E4F9262111C1F000988574 /* KissXML.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6E4F92F2111CC5F00988574 /* libidn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6E4F9282111C1F000988574 /* libidn.framework */; };
+		F6E4F9302111CC5F00988574 /* libidn.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6E4F9282111C1F000988574 /* libidn.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6E4F9322111CCA400988574 /* XMPPFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6E4F9192111C1B900988574 /* XMPPFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F6E4F9372111CCD000988574 /* CocoaLumberjack.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F6E4F9352111CCD000988574 /* CocoaLumberjack.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6E4F9182111C1B900988574 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6E4F90B2111C1B900988574 /* XMPPFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 0D44BAEA1E537066000930E0;
+			remoteInfo = "XMPPFramework (iOS)";
+		};
+		F6E4F91A2111C1B900988574 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6E4F90B2111C1B900988574 /* XMPPFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D9DCD5331E6256D90010D1C7;
+			remoteInfo = "XMPPFramework (macOS)";
+		};
+		F6E4F91C2111C1B900988574 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6E4F90B2111C1B900988574 /* XMPPFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D9DCD6961E6258CF0010D1C7;
+			remoteInfo = "XMPPFramework (tvOS)";
+		};
+		F6E4F91E2111C1B900988574 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6E4F90B2111C1B900988574 /* XMPPFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D9A7AA621FB97892005183CD;
+			remoteInfo = "XMPPFrameworkSwift (iOS)";
+		};
+		F6E4F9202111C1B900988574 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6E4F90B2111C1B900988574 /* XMPPFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D9A7AE561FB97A3C005183CD;
+			remoteInfo = "XMPPFrameworkSwift (macOS)";
+		};
+		F6E4F9222111C1B900988574 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6E4F90B2111C1B900988574 /* XMPPFramework.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D9A7AFA11FB97A65005183CD;
+			remoteInfo = "XMPPFrameworkSwift (tvOS)";
+		};
+		F6E4F9332111CCA400988574 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6E4F90B2111C1B900988574 /* XMPPFramework.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D44BAE91E537066000930E0;
+			remoteInfo = "XMPPFramework (iOS)";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		07077ACF207E7D1700B9FCD8 /* Embed Frameworks */ = {
@@ -69,7 +130,12 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				F6E4F92C2111CC5F00988574 /* CocoaAsyncSocket.framework in Embed Frameworks */,
+				F6E4F92E2111CC5F00988574 /* KissXML.framework in Embed Frameworks */,
+				F6E4F9302111CC5F00988574 /* libidn.framework in Embed Frameworks */,
 				07077ACE207E7D1700B9FCD8 /* WebRTC.framework in Embed Frameworks */,
+				F6E4F9372111CCD000988574 /* CocoaLumberjack.framework in Embed Frameworks */,
+				F6E4F9322111CCA400988574 /* XMPPFramework.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -165,6 +231,11 @@
 		07077B30207E7F0200B9FCD8 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		07077B31207E7F0200B9FCD8 /* SRWebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRWebSocket.h; sourceTree = "<group>"; };
 		07077B32207E7F0200B9FCD8 /* SRWebSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRWebSocket.m; sourceTree = "<group>"; };
+		F6E4F90B2111C1B900988574 /* XMPPFramework.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XMPPFramework.xcodeproj; path = ../../XMPPFramework/XMPPFramework.xcodeproj; sourceTree = "<group>"; };
+		F6E4F9242111C1F000988574 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CocoaAsyncSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6E4F9262111C1F000988574 /* KissXML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = KissXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6E4F9282111C1F000988574 /* libidn.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = libidn.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6E4F9352111CCD000988574 /* CocoaLumberjack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CocoaLumberjack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,9 +243,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6E4F9252111C1F000988574 /* CocoaAsyncSocket.framework in Frameworks */,
+				F6E4F9272111C1F000988574 /* KissXML.framework in Frameworks */,
+				F6E4F9292111C1F000988574 /* libidn.framework in Frameworks */,
+				F6E4F92F2111CC5F00988574 /* libidn.framework in Frameworks */,
+				F6E4F92A2111C1F000988574 /* XMPPFramework.framework in Frameworks */,
 				07077ACC207E7CB800B9FCD8 /* libicucore.tbd in Frameworks */,
 				07077ACA207E648C00B9FCD8 /* WebRTC.framework in Frameworks */,
-				07077ACD207E7D1700B9FCD8 /* WebRTC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,6 +259,7 @@
 		07077A0D207E636C00B9FCD8 = {
 			isa = PBXGroup;
 			children = (
+				F6E4F9352111CCD000988574 /* CocoaLumberjack.framework */,
 				07077AC8207E648C00B9FCD8 /* Frameworks */,
 				07077A18207E636C00B9FCD8 /* AppRTCMobile-iOS */,
 				07077A17207E636C00B9FCD8 /* Products */,
@@ -212,6 +288,10 @@
 		07077AC8207E648C00B9FCD8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F6E4F9242111C1F000988574 /* CocoaAsyncSocket.framework */,
+				F6E4F9262111C1F000988574 /* KissXML.framework */,
+				F6E4F9282111C1F000988574 /* libidn.framework */,
+				F6E4F90B2111C1B900988574 /* XMPPFramework.xcodeproj */,
 				07077ACB207E7CB800B9FCD8 /* libicucore.tbd */,
 				07077AC9207E648C00B9FCD8 /* WebRTC.framework */,
 			);
@@ -347,6 +427,19 @@
 			path = SocketRocket;
 			sourceTree = "<group>";
 		};
+		F6E4F90C2111C1B900988574 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6E4F9192111C1B900988574 /* XMPPFramework.framework */,
+				F6E4F91B2111C1B900988574 /* XMPPFramework.framework */,
+				F6E4F91D2111C1B900988574 /* XMPPFramework.framework */,
+				F6E4F91F2111C1B900988574 /* XMPPFrameworkSwift.framework */,
+				F6E4F9212111C1B900988574 /* XMPPFrameworkSwift.framework */,
+				F6E4F9232111C1B900988574 /* XMPPFrameworkSwift.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -362,6 +455,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				F6E4F9342111CCA400988574 /* PBXTargetDependency */,
 			);
 			name = "AppRTCMobile-iOS";
 			productName = "AppRTCMobile-iOS";
@@ -393,12 +487,63 @@
 			mainGroup = 07077A0D207E636C00B9FCD8;
 			productRefGroup = 07077A17207E636C00B9FCD8 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = F6E4F90C2111C1B900988574 /* Products */;
+					ProjectRef = F6E4F90B2111C1B900988574 /* XMPPFramework.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				07077A15207E636C00B9FCD8 /* AppRTCMobile-iOS */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		F6E4F9192111C1B900988574 /* XMPPFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XMPPFramework.framework;
+			remoteRef = F6E4F9182111C1B900988574 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F6E4F91B2111C1B900988574 /* XMPPFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XMPPFramework.framework;
+			remoteRef = F6E4F91A2111C1B900988574 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F6E4F91D2111C1B900988574 /* XMPPFramework.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XMPPFramework.framework;
+			remoteRef = F6E4F91C2111C1B900988574 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F6E4F91F2111C1B900988574 /* XMPPFrameworkSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XMPPFrameworkSwift.framework;
+			remoteRef = F6E4F91E2111C1B900988574 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F6E4F9212111C1B900988574 /* XMPPFrameworkSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XMPPFrameworkSwift.framework;
+			remoteRef = F6E4F9202111C1B900988574 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		F6E4F9232111C1B900988574 /* XMPPFrameworkSwift.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = XMPPFrameworkSwift.framework;
+			remoteRef = F6E4F9222111C1B900988574 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		07077A14207E636C00B9FCD8 /* Resources */ = {
@@ -468,6 +613,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F6E4F9342111CCA400988574 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "XMPPFramework (iOS)";
+			targetProxy = F6E4F9332111CCA400988574 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		07077A24207E636E00B9FCD8 /* LaunchScreen.storyboard */ = {
