@@ -12,6 +12,10 @@
 #import "UIImage+ARDUtilities.h"
 #import "WebRTC/RTCLogging.h"
 
+@import CocoaLumberjack;
+
+static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
+
 static CGFloat const kRoomTextFieldHeight = 40;
 static CGFloat const kRoomTextFieldMargin = 8;
 static CGFloat const kCallControlMargin = 8;
@@ -231,6 +235,20 @@ static CGFloat const kCallControlMargin = 8;
     RTCLogInfo(@"On Connect");
 }
 - (void)onDisconnect:(id)sender {
-    RTCLogInfo(@"On Disconnect");
+    DDLogVerbose(@"On Disconnect 222");
+    
+    dispatch_block_t block = ^{ @autoreleasepool {
+        DDLogVerbose(@"On Disconnect 333");
+        NSArray *crew = [NSArray arrayWithObjects:
+                         @"Dave",
+                         @"Heywood",
+                         @"Frank", nil];
+        
+        // This will throw an exception.
+        NSLog(@"%@", [crew objectAtIndex:10]);
+    } };
+    
+    dispatch_async(dispatch_get_main_queue(), block);
+    
 }
 @end

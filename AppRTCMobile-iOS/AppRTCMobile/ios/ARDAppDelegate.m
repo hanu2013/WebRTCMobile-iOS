@@ -16,6 +16,12 @@
 #import "WebRTC/RTCTracing.h"
 #import "WebRTC/RTCFileLogger.h"
 #import "ARDMainViewController.h"
+#import "UncaughtExceptionHandler.h"
+//#import "CocoaLumberjack/DDLog.h"
+
+@import CocoaLumberjack;
+
+static const DDLogLevel ddLogLevel = DDLogLevelVerbose;
 
 @interface ARDAppDelegate()  <XMPPStreamDelegate>
 
@@ -34,6 +40,20 @@
 - (BOOL)application:(UIApplication *)application
 didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *logsDirectory = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
+    //NSString *logsDirectory = [baseDir stringByAppendingPathComponent:@"Logs"];
+    
+    DDLogFileManagerDefault *defaultLogFileManager = [[DDLogFileManagerDefault alloc] initWithLogsDirectory: logsDirectory];
+    DDFileLogger *ddFileLogger = [[DDFileLogger alloc] initWithLogFileManager:defaultLogFileManager]; // File Logger
+    
+    ddFileLogger.rollingFrequency = 60 * 60 * 24 * 5; // 24 hour rolling
+    [ddFileLogger setMaximumFileSize: (5 * 1024 * 1024)];
+    ddFileLogger.logFileManager.maximumNumberOfLogFiles = 7;
+    [DDLog addLogger:ddFileLogger];
+    
+//    NSSetUncaughtExceptionHandler(&HandleException);
+    InstallUncaughtExceptionHandler();
     //================= LOG
     RTCSetMinDebugLogLevel(RTCLoggingSeverityVerbose);
     if (!logFileRTC) {
@@ -75,6 +95,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     NSError *error;
     
+    
     [self.xmppStream connectWithTimeout:50 error: &error];
     
     if (error) {
@@ -103,7 +124,7 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // warnings and errors.
     
     
-    RTCLogInfo(@"HELOOO ------------");
+    DDLogVerbose(@"HELOOO ------------");
     
     //#endif
     
@@ -137,5 +158,8 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 - (void)xmppStream:(XMPPStream *)sender didSendIQ:(XMPPIQ *)iq {
     NSLog(@"4. IQ: %@", [iq elementID]);
 }
-
+//void HandleException(NSException *exception)
+//{
+//    DDLogVerbose(@"=== EXCEPTION === %@", [exception description]);
+//}
 @end
