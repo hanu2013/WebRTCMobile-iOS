@@ -11,6 +11,7 @@
 #import "ARDMainView.h"
 #import "UIImage+ARDUtilities.h"
 #import "WebRTC/RTCLogging.h"
+#import "ARDAppDelegate.h"
 
 @import CocoaLumberjack;
 
@@ -134,7 +135,7 @@ static CGFloat const kCallControlMargin = 8;
         
         
         _disconnectButton = [UIButton buttonWithType:UIButtonTypeSystem];
-        [_disconnectButton setTitle:@"Disconnect" forState:UIControlStateNormal];
+        [_disconnectButton setTitle:@"DooooTest" forState:UIControlStateNormal];
         _disconnectButton.titleLabel.font = controlFont;
         [_disconnectButton sizeToFit];
         [_disconnectButton addTarget:self action:@selector(onDisconnect:) forControlEvents:UIControlEventTouchUpInside];
@@ -235,20 +236,23 @@ static CGFloat const kCallControlMargin = 8;
     RTCLogInfo(@"On Connect");
 }
 - (void)onDisconnect:(id)sender {
-    DDLogVerbose(@"On Disconnect 222");
+//    DDLogVerbose(@"On Disconnect 222");
+    ARDAppDelegate *main = (ARDAppDelegate*) [[UIApplication sharedApplication] delegate] ;
     
-    dispatch_block_t block = ^{ @autoreleasepool {
-        DDLogVerbose(@"On Disconnect 333");
-        NSArray *crew = [NSArray arrayWithObjects:
-                         @"Dave",
-                         @"Heywood",
-                         @"Frank", nil];
-        
-        // This will throw an exception.
-        NSLog(@"%@", [crew objectAtIndex:10]);
-    } };
+    [main doSendMessage:nil];
     
-    dispatch_async(dispatch_get_main_queue(), block);
+//    dispatch_block_t block = ^{ @autoreleasepool {
+//        DDLogVerbose(@"On Disconnect 333");
+//        NSArray *crew = [NSArray arrayWithObjects:
+//                         @"Dave",
+//                         @"Heywood",
+//                         @"Frank", nil];
+//
+//        // This will throw an exception.
+//        NSLog(@"%@", [crew objectAtIndex:10]);
+//    } };
+//
+//    dispatch_async(dispatch_get_main_queue(), block);
     
 }
 @end

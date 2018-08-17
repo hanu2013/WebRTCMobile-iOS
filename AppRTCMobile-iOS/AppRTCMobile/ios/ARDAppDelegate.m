@@ -69,8 +69,11 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     if (!self.xmppStream) {
         self.xmppStream = [[XMPPStream alloc] init];
     }
-    
+#if TARGET_IPHONE_SIMULATOR
+    self.xmppStream.myJID = [XMPPJID jidWithString:@"user02@localhost/abc"];
+#else
     self.xmppStream.myJID = [XMPPJID jidWithString:@"user01@localhost/abc"];
+#endif
     self.xmppStream.hostName = @"125.235.13.148";
     self.xmppStream.hostPort = 5222;
     
@@ -141,7 +144,11 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     NSLog(@"2. DID CONNECT ");
     NSError *error;
     //[self.xmppStream authenticateWithPassword:@"22872172152888958234602" error:&error];
+#if TARGET_IPHONE_SIMULATOR
+    [self.xmppStream authenticateWithPassword:@"user02" error:&error];
+#else
     [self.xmppStream authenticateWithPassword:@"user01" error:&error];
+#endif
     if(error) {
         NSLog(@"3. %@", error.description);
     }
@@ -162,4 +169,12 @@ didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 //{
 //    DDLogVerbose(@"=== EXCEPTION === %@", [exception description]);
 //}
+
+
+- (void) doSendMessage: (XMPPMessage *) msg {
+    NSString *UUID = [[NSUUID UUID] UUIDString];
+    XMPPMessage *tmp = [[XMPPMessage alloc] initWithType:@"call" to: [XMPPJID jidWithString:@"user01@localhost"] elementID:UUID];
+    
+    [self.xmppStream sendElement:tmp];
+}
 @end

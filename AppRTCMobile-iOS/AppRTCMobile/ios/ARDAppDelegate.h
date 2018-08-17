@@ -24,6 +24,7 @@
 @property (nonatomic, strong) XMPPPing *xmppPing;
 @property (nonatomic, strong) XMPPReconnect *xmppReconnect;
 
+- (void) doSendMessage: (XMPPMessage *) msg;
 @end
 
 
